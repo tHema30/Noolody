@@ -79,7 +79,7 @@ const Signup = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:7100/api/users/",
+        "http://localhost:7300/api/users/",
         {
           ...inputValue,
         },

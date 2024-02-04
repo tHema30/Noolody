@@ -1,19 +1,28 @@
+
 import mongoose from 'mongoose';
-
 const dressDesignSchema = new mongoose.Schema({
-  category: { type: String, required: true },
-  // Add other dress design properties as needed
-  designImage: {
-    public_id: { type: String },
-    url: { type: String },
+  category: {
+    type: String,
+    required: true,
   },
-  description:{ type: String, required: true }
-
-  }, { 
-    timestamps: true 
-  });
-
-
-const DressDesign = mongoose.model('dressDesigns', dressDesignSchema);
-
+  description: {
+    type: String,
+    required: true,
+  },
+  designImage: {
+    public_id: {
+      type: String,
+      required: true,
+    },
+    url: {
+      type: String,
+      required: true,
+    },
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+const DressDesign = mongoose.model('DressDesign', dressDesignSchema);
 export default DressDesign;

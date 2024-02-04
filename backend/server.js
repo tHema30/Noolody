@@ -6,13 +6,12 @@ import cors from "cors"
 dotenv.config();
 import cookieParser from 'cookie-parser';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
-const port = process.env.PORT || 7100;
+const port = process.env.PORT || 7300;
 import userRoutes from './routes/userRoutes.js';
 import dressDesignRoutes from './routes/dressDesignRoutes.js';
 import adminRoute from './routes/adminRoute.js'
 // import DressDesign from './models/dressDesignModel.js'
-import multer from 'multer';
-import path from 'path';
+
 
 
 const  mongoString =process.env.DATABASE_URL

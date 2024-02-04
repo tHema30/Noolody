@@ -5,7 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from "./Profile";
 // import { useForm } from "react-hook-form";
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:7100/api/users/auth",
+        "http://localhost:7300/api/users/auth",
         {
           ...inputValue,
         },
@@ -115,6 +116,7 @@ const Login = () => {
 
   return (
     <div className="form_container">
+
       {isLoggedIn ? <Profile handleLogout={handleLogout} /> : (
         <>
           <h2>Login Account</h2>

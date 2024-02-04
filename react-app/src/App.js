@@ -14,6 +14,7 @@ import About from "./components/About";
 import Features from "./components/Features";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import AdminHome from '../src/components/Admin/AdminHome';
 
 
 
@@ -22,13 +23,15 @@ import './assets/css/bootstrap.min.css';
 import './App.css';
 import FormBook from "./components/FormBook";
 import TailorRegister from "./components/TailorRegister";
+import DressDesign from "./components/DressDesign";
+import DressDesignList from "./components/DressDesignList";
 
 
 
 function App() {
   return (
      <div>
-      <Header/>
+      {/* <Header/> */}
     <Routes>
     <Route path="/" element={<Text/>} />
     <Route path="/login" element={<Login />} />
@@ -41,10 +44,23 @@ function App() {
     <Route path="/formbook" element={<FormBook/>} />
     <Route path="/home" element={<Home/>} />
     <Route path="/tailorregister" element={<TailorRegister/>} />
+    <Route path="/dress" element={<DressDesign/>} />
+    <Route path="/admin/*" element={<AdminHome />} />
+    <Route path="/dresscard" element={<DressDesignList />} />
+
+    
+
+
+    
+
+    
+
+
+
 
 
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
 
   </div>
   

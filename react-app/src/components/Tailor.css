@@ -19,7 +19,7 @@
     height: 3px;
     width: 27px;
     border-radius: 8px;
-    background-color: #cb2bc8;
+    background-color: #492E87 ;
 }
 .container form{
     position: relative;
@@ -107,7 +107,7 @@ form .fields .input-field{
     color: #fff;
     border-radius: 5px;
     margin: 25px 0;
-    background-color: #ca21c5;
+    background-color: #492E87 ;
     transition: all 0.3s linear;
     cursor: pointer;
 }
@@ -116,7 +116,7 @@ form .fields .input-field{
     font-weight: 400;
 }
 form button:hover{
-    background-color: #c611ae;
+    background-color: #492E87 ;
 }
 form button i,
 form .backBtn i{

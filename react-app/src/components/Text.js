@@ -72,7 +72,7 @@ function Text() {
      <div class="row g-4">
          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
              <div class="bg-white text-center h-100 p-4 p-xl-5">
-                 <img class="img-fluid mb-4" src="img/icon-1.png" alt=""/>
+                 <i class="img-fluid mb-4" src="img/icon-1.png" alt=""/>
                  <h4 class="mb-3">Home Delivery</h4>
                  <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
                  <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="1">Read More</a>
@@ -97,60 +97,7 @@ function Text() {
      </div>
  </div>
 </div>
- <div class="container-fluid bg-light bg-icon py-6 mb-5">
- <div class="container">
-     <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '500px'}}>
-         <h1 class="display-5 mb-3">Customer Review</h1>
-         <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-     </div>
-     <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-         <div class="testimonial-item position-relative bg-white p-5 mt-4">
-             <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div class="d-flex align-items-center">
-                 <img class="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div class="ms-3">
-                     <h5 class="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div class="testimonial-item position-relative bg-white p-5 mt-4">
-             <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div class="d-flex align-items-center">
-                 <img class="flex-shrink-0 rounded-circle" src="" alt=""/>
-                 <div class="ms-3">
-                     <h5 class="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div class="testimonial-item position-relative bg-white p-5 mt-4">
-             <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div class="d-flex align-items-center">
-                 <img class="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div class="ms-3">
-                     <h5 class="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div class="testimonial-item position-relative bg-white p-5 mt-4">
-             <i class="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div class="d-flex align-items-center">
-                 <img class="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div class="ms-3">
-                     <h5 class="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-     </div>
-     </div>
-     </div>
+ 
     
       <div class="container-xxl py-5">
         <div class="container">
@@ -160,7 +107,7 @@ function Text() {
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div class="bg-light p-4">
                         <a class="d-block h5 lh-base mb-4" href="1">How hghjkgjhg jgkhlvvhj ggkuhohgif hjgjkhlhlhlkhkk</a>
                         <div class="text-muted border-top pt-4">
@@ -170,7 +117,7 @@ function Text() {
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <img class="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div class="bg-light p-4">
                         <a class="d-block h5 lh-base mb-4" href="1">vvccjh,vjhvbnmbhyfgjkygfygu hvjhhjggxchfcjhbkv hjhg</a>
                         <div class="text-muted border-top pt-4">
@@ -180,7 +127,7 @@ function Text() {
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div class="bg-light p-4">
                         <a class="d-block h5 lh-base mb-4" href="1">ffhjfkjgk;h;igbhjchgcghvkj hvhjf;gydytfjuhiuftuf</a>
                         <div class="text-muted border-top pt-4">

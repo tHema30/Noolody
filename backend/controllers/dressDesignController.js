@@ -1,36 +1,19 @@
-import cloudinary from '../utils/imagecloudinary.js';
-import DressDesign from '../models/dressDesignModel.js'
 
-// Controller for handling dress design upload
+import DressDesign from '../models/dressDesignModel.js';
+import cloudinary from '../utils/imagecloudinary.js';
+import upload from '../utils/multer.js';
+
 const uploadDressDesign = async (req, res) => {
   try {
-    const { category } = req.body;
+    const { category, description } = req.body;
+    // Use the original filename (if available) or generate a unique identifier
+    const publicId = req.file.originalname || `dress_${Date.now()}`;
+    // Upload image to Cloudinary
     const result = await cloudinary.uploader.upload(req.file.path, {
-      folder: `FineFitDesigns/${category}`,
+      folder: `thaiyal/${category}`,
+      public_id: publicId,
     });
-
-    // Respond with the uploaded dress design details
-    res.status(201).json({
-      public_id: result.public_id,
-      url: result.secure_url,
-    });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
-};
-
-// Controller for creating a new dress design entry
-const createDressDesign = async (req, res) => {
-  try {
-    const {  category, description } = req.body;
-
-    // Use the uploaded dress design details from the previous route
-    const result = await cloudinary.uploader.upload(req.file.path,(err,result)=>{
-      if(err){console.log(err)}
-    });
-    console.log(result);
-
+    // Save dress design details to MongoDB
     const dressDesign = new DressDesign({
       category,
       description,
@@ -38,20 +21,54 @@ const createDressDesign = async (req, res) => {
         public_id: result.public_id,
         url: result.secure_url,
       },
-      
     });
 
     const savedDressDesign = await dressDesign.save();
-    // Perform additional actions as needed, e.g., send confirmation email
-
     res.status(201).json({
-      success:true,
-      savedDressDesign:savedDressDesign
-     } );
+      success: true,
+      savedDressDesign,
+    });
   } catch (error) {
     console.error(error);
-    res.status(500).json(error)
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 };
 
-export{uploadDressDesign,createDressDesign}
+
+// Controller to get all dress designs
+const getAllDressDesigns = async (req, res) => {
+  try {
+    const dressDesigns = await DressDesign.find();
+    res.status(200).json(dressDesigns);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
+
+// Controller to get a specific dress design by ID
+const getDressDesignByCat = async (req, res) => {
+  const {category} = req.body;
+console.log(category);
+  try {
+    const dressDesign = await DressDesign.find({category:category});
+
+    if (!dressDesign) {
+      return res.status(404).json({ message: 'Dress Design not found' });
+    }
+
+    res.status(200).json(dressDesign);
+  } catch (error) {
+    // console.error(error);
+    res.status(500).json({ message:error});
+  }
+};
+
+
+
+
+export {
+                uploadDressDesign,
+                getAllDressDesigns,
+                getDressDesignByCat
+              };

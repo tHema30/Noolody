@@ -1,9 +1,12 @@
 import React from "react";
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 function Features() {
     return (
+        <>
+        <Header></Header>
       <div classNameName="App">
        <div className="container-fluid bg-light bg-icon my-5 py-6 onefit">
  <div className="container">
@@ -40,6 +43,8 @@ function Features() {
   </div>
  </div>
 </div>
+<Footer/>
+</>
     );
   }
   

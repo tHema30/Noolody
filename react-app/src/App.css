@@ -6,7 +6,7 @@
 
 /********** CSS **********/
 :root {
-    --primary: #b815b3;
+    --primary: #492E87;
     --secondary: #f1eeec;
     --light: #F7F8FC;
     --dark: #111111;
@@ -31,8 +31,10 @@
 }
 
 .bg-icon {
-    background: url(../src/assets/img/cutting-sewing-tool-supplies-seamless-background-threads-pin-meter_135176-1599.avif) center center repeat;
+    background:   url(../src/assets/img/cutting-sewing-tool-supplies-seamless-background-threads-pin-meter_135176-1599.avif) center center repeat;
     background-size: contain;
+    /* background-color: rgba(255, 255, 255, 0.5); Adjust the last value (0.5) to change the opacity */
+
 }
 
 
@@ -62,7 +64,7 @@
 .btn.btn-outline-primary:hover,
 .btn.btn-outline-secondary:hover {
     color: #FFFFFF;
-    background-color:#b815b3 !important;
+    background-color: #492E87 !important;
     border-color: #160813 !important;
 }
 
@@ -248,16 +250,18 @@
 /*** About ***/
 
 .btn-primary{
-border-color: #b815b3 !important;
+border-color: #492E87 !important;
 }
 .btn-outline-primary{
-    border-color:#bf0ab9 !important;
+    border-color: #492E87 !important;
 
 }
 
 .onefit a{
-    color: #b815b3 !important;
+    color: #492E87 !important;
 }
+
+
 
 .about-img img {
     position: relative;
@@ -305,7 +309,7 @@ border-color: #b815b3 !important;
 }
 
 .testimonial-item .text-primary {
-    color: #bf0ab9 !important;
+    color:  #492E87 !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item i {
@@ -400,11 +404,11 @@ border-color: #b815b3 !important;
     color: #bf0ab9 !important;
 }
 .text-primary  {
-    color: #b815b3 !important;
+    color:  #492E87 !important;
 }
 
 .twocon{
-    background-color: #83037f !important;
+    background-color: #492E87 !important;
     height: 80vh !important;
 }
 
@@ -414,12 +418,12 @@ border-color: #b815b3 !important;
 } */
 
 .section6{ text-align: center;
-    background-color:#83037f;
+    background-color: #fff;
     height: 500px;
 }
- .section6 ,h2 ,p{
+ /* .section6 ,h2 ,p{
  color: #0c0c0c;
- }
+ } */
 
 .profile_container{
     height: 100vh;
@@ -442,7 +446,7 @@ border-color: #b815b3 !important;
   .form_container > h2 {
     margin-block: 1rem;
     padding-block: 0.6rem;
-    color: rgb(183, 0, 255);
+    color:  #492E87;
   }
   
   .form_container > form {
@@ -471,7 +475,7 @@ border-color: #b815b3 !important;
   }
   
   .form_container button {
-    background-color:rgb(183, 0, 255);
+    background-color: #492E87;
     color: #fff;
     border: none;
     padding: 0.6rem;
@@ -482,7 +486,7 @@ border-color: #b815b3 !important;
   
   span a {
     text-decoration: none;
-    color:rgb(183, 0, 255);
+    color: #492E87;
   }
   
   .home_page {
@@ -500,11 +504,11 @@ border-color: #b815b3 !important;
   }
   
   .home_page span {
-    color: rgb(187, 0, 255);
+    color:  #492E87;
   }
   
   .home_page button {
-    background-color: rgb(83, 27, 80);
+    background-color: #492E87;
     color: #fff;
     cursor: pointer;
     padding: 1rem 3rem;
@@ -518,4 +522,6 @@ border-color: #b815b3 !important;
     background-color: rgb(84, 5, 97);
   }
   
-  
+  .design-form{
+    padding-top: 150px;
+ } 

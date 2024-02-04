@@ -357,10 +357,10 @@ button:hover{
 /*** About ***/
 
 .btn-primary{
-border-color: #b815b3 !important;
+border-color:#492E87  !important;
 }
 .btn-outline-primary{
-  border-color:#bf0ab9 !important;
+  border-color:#492E87  !important;
 
 }
 
@@ -414,7 +414,7 @@ border-color: #b815b3 !important;
 }
 
 .testimonial-item .text-primary {
-  color: #bf0ab9 !important;
+  color: #492E87  !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item i {
@@ -499,20 +499,20 @@ border-color: #b815b3 !important;
 }
 
 .text-primary{
-  color: #bf0ab9;
+  color: #492E87 ;
 }
 
 .text-muted .text-primary{
-  color: #b815b3 !important;
+  color:#492E87  !important;
 }
 .text-body .text-primary{
-  color: #bf0ab9 !important;
+  color: #492E87 !important;
 }
 .text-primary  {
-  color: #b815b3 !important;
+  color: #492E87 !important;
 }
 
 .twocon{
-  background-color: #83037f !important;
+  background-color:#492E87  !important;
 }
 

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 // import axios from "axios";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -60,6 +62,8 @@ const Contact = () => {
   };
 return (
     <div>
+    
+      <Header></Header>
       <div className="container-xxl py-6">
       <div className="container ">
           <div className="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '500px' }}>
@@ -132,7 +136,8 @@ return (
           {/* <label htmlFor="message">Message</label> */}
         </div>
       </div>
-      <div classNameName="col-12">
+      <div className
+      Name="col-12">
               <button className="nextBtn">
                   <span className="btnText">Submit</span>
                   <i className="uil uil-navigator"></i>
@@ -141,6 +146,8 @@ return (
     </div>
   </form>
   <ToastContainer />
+  {/* </Footer> */}
+
 </div>
 </div>
 </div>

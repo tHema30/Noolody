@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function Home() {
     return (
         <>
-      
+      <Header></Header>
       <div>
         <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
@@ -109,61 +111,7 @@ function Home() {
    </div>
 </section>
 
- <div className="container-fluid bg-light bg-icon py-6 mb-5">
- <div className="container">
-     <div className="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '500px'}}>
-         <h1 className="display-5 mb-3">Customer Review</h1>
-         <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-     </div>
-     <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-         <div className="testimonial-item position-relative bg-white p-5 mt-4">
-             <i className="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div className="d-flex align-items-center">
-                 <img className="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div className="ms-3">
-                     <h5 className="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div className="testimonial-item position-relative bg-white p-5 mt-4">
-             <i className="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div className="d-flex align-items-center">
-                 <img className="flex-shrink-0 rounded-circle" src="" alt=""/>
-                 <div className="ms-3">
-                     <h5 className="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div className="testimonial-item position-relative bg-white p-5 mt-4">
-             <i className="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div className="d-flex align-items-center">
-                 <img className="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div className="ms-3">
-                     <h5 className="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-         <div className="testimonial-item position-relative bg-white p-5 mt-4">
-             <i className="fa fa-quote-left fa-3x text-primary position-absolute top-0 start-0 mt-n4 ms-5"></i>
-             <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-             <div className="d-flex align-items-center">
-                 <img className="flex-shrink-0 rounded-circle" src="" alt=""/> 
-                 <div className="ms-3">
-                     <h5 className="mb-1">Client Name</h5>
-                     <span>Profession</span>
-                 </div>
-             </div>
-         </div>
-     </div>
-     </div>
-     </div>
-    
+ 
       <div className="container-xxl py-5">
         <div className="container">
             <div className="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
@@ -172,7 +120,7 @@ function Home() {
             </div>
             <div className="row g-4">
                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img className="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div className="bg-light p-4">
                         <a className="d-block h5 lh-base mb-4" href="1">How hghjkgjhg jgkhlvvhj ggkuhohgif hjgjkhlhlhlkhkk</a>
                         <div className="text-muted border-top pt-4">
@@ -182,7 +130,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <img className="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div className="bg-light p-4">
                         <a className="d-block h5 lh-base mb-4" href="1">vvccjh,vjhvbnmbhyfgjkygfygu hvjhhjggxchfcjhbkv hjhg</a>
                         <div className="text-muted border-top pt-4">
@@ -192,7 +140,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <img className="img-fluid" src={require("../assets/img/images.jpeg")} alt=""/>
+                    <img className="img-fluid" src={require("../assets/img/pexels-suzy-hazelwood-1266139.jpg")} alt=""/>
                     <div className="bg-light p-4">
                         <a className="d-block h5 lh-base mb-4" href="1">ffhjfkjgk;h;igbhjchgcghvkj hvhjf;gydytfjuhiuftuf</a>
                         <div className="text-muted border-top pt-4">
@@ -205,6 +153,8 @@ function Home() {
         </div>
     </div>
  </div>
+<Footer/>
+
  </>
     );
   }

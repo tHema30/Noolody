@@ -1,10 +1,13 @@
 import React from "react";
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 
 function About() {
     return (
+        <>
+        <Header></Header>
       <div>
       <div className="container-xxl py-5">
 <div className="container">
@@ -26,6 +29,8 @@ function About() {
 </div>
 </div>
 </div>
+<Footer/>
+</>
     );
   }
   

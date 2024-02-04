@@ -1,14 +1,17 @@
+
 import express from 'express';
-const router = express.Router()
-import { uploadDressDesign,createDressDesign} from '../controllers/dressDesignController.js'
+import upload from '../utils/multer.js';
+import {uploadDressDesign} from '../controllers/dressDesignController.js';
+import {getDressDesignByCat ,getAllDressDesigns} from '../controllers/dressDesignController.js'
 
-import { upload } from '../utils/multer.js';
+const router = express.Router();
 
 
-// Dress Design routes
+// Route for handling dress design upload
 router.post('/upload', upload.single('designImage'), uploadDressDesign);
-router.post('/dress-designs', upload.single('designImage'), createDressDesign);
 
+router.get('/dress-designs', getAllDressDesigns);
+router.get('/dress-designs/cat',getDressDesignByCat);
 
 
 export default router;

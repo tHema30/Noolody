@@ -9,7 +9,7 @@ function Header() {
     const handleCategoryClick = async(category) => {
       setSelectedCategory(category);
       try {
-        const response = await fetch('http://localhost:7100/api/designs/upload', {
+        const response = await fetch('http://localhost:7300/api/designs/dress-designs/cat', {
           method: 'GET',
           body: {category:selectedCategory},
         });

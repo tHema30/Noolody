@@ -12,9 +12,9 @@ function AdminHome (){
       <AdminNavbar />
       <Routes>
 
-      <Route path="/admin/users" element={<User />} />
-      <Route path="/admin/tailors" element={<TailorsDetails />} />
-      <Route path="/admin/designs" element={<DressDesignDetails />} />
+      <Route path="/users" element={<User />} />
+      <Route path="/tailors" element={<TailorsDetails />} />
+      <Route path="/designs" element={<DressDesignDetails />} />
 
    
  

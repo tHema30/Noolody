@@ -1,4 +1,3 @@
-// AdminTable.js
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -26,18 +25,29 @@ const thTdStyle = {
 const User = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get('http://localhost:7100/api/users/auth');
-        setUsers(response.data);
-      } catch (error) {
-        console.error('Error fetching users:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchUsers = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:7300/api/admin/all-users');
+  //       setUsers(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching users:', error);
+  //     }
+  //   };
 
-    fetchUsers();
+  //   fetchUsers();
+  // }, []);
+  useEffect(() => {
+    // Fetch dress designs from the server
+    axios.get('http://localhost:7300/api/admin/all-users') // Update the URL with your actual API endpoint
+      .then(response => {
+        setUsers(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching user details:', error);
+      });
   }, []);
+
 
   return (
     <div style={UserStyle} className="admin-table">

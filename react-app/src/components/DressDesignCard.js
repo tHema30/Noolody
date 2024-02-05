@@ -6,8 +6,8 @@ const DressDesignCard = ({ dressDesign }) => {
     <Card>
       <Card.Img variant="top" src={dressDesign.designImage.url} alt={dressDesign.category} />
       <Card.Body>
-        {/* <Card.Title>{dressDesign.category}</Card.Title> */}
-        {/* <Card.Text>{dressDesign.description}</Card.Text> */}
+        <Card.Title>{dressDesign.category}</Card.Title>
+        <Card.Text>{dressDesign.description}</Card.Text>
         <Button variant="primary">View Details</Button>
       </Card.Body>
     </Card>

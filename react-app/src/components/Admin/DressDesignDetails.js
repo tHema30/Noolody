@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Table, Button } from 'react-bootstrap';
 
-const DressDesignDetails = () => {
+const DressDesignDetails = ({ onEdit, onDelete }) => {
   const [dressDesigns, setDressDesigns] = useState([]);
 
   useEffect(() => {
     // Fetch dress designs from the server
-    axios.get('http://localhost:7300/api/designs/dress-designs') // Update the URL with your actual API endpoint
+    axios.get('http://localhost:7300/api/designs/dress-designs/cat',{category:"ladies"}) // Update the URL with your actual API endpoint
       .then(response => {
         setDressDesigns(response.data);
       })
@@ -45,8 +45,8 @@ const DressDesignDetails = () => {
                 />
               </td>
               <td>
-                <Button variant="primary">Edit</Button>{' '}
-                <Button variant="danger">Delete</Button>
+                <Button onClick={() => onEdit(dressDesign)} variant="primary">Edit</Button>{' '}
+                <Button onClick={() => onDelete(dressDesign._id)} variant="danger">Delete</Button>
               </td>
             </tr>
           ))}
@@ -56,4 +56,4 @@ const DressDesignDetails = () => {
   );
 };
 
-export default DressDesignDetails ;
+export default DressDesignDetails;

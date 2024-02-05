@@ -1,6 +1,4 @@
-// TailorsTable.js
-// import axios from 'axios'; 
-
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 const tableStyle = {
@@ -16,20 +14,18 @@ const thTdStyle = {
 };
 
 const TailorsDetails = () => {
-  const [tailors, setTailors] = useState([]);
+  const [tailors, setTailors] = useState(null); // Use null instead of an empty array
 
   useEffect(() => {
-    const fetchTailors = async () => {
-      try {
-        const response = await fetch('http://localhost:7100/api/users/tailorsProfile');
-        const data = await response.json();
-        setTailors(data.data);
-      } catch (error) {
-        console.error('Error fetching tailors:', error);
-      }
-    };
-
-    fetchTailors();
+    // Fetch tailors data from the server
+    axios.get('http://localhost:7300/api/admin/tailorsProfile')
+      .then(response => {
+        console.log('Response data:', response.data);
+        setTailors(response.data.data); // Adjust this line based on the actual structure of the API response
+      })
+      .catch(error => {
+        console.error('Error fetching tailor details:', error);
+      });
   }, []);
 
   return (
@@ -49,7 +45,7 @@ const TailorsDetails = () => {
           </tr>
         </thead>
         <tbody>
-          {tailors.map((tailor) => (
+          {tailors && tailors.map((tailor) => (
             <tr key={tailor._id}>
               <td style={thTdStyle}>{tailor.name}</td>
               <td style={thTdStyle}>{tailor.email}</td>
@@ -68,3 +64,4 @@ const TailorsDetails = () => {
 };
 
 export default TailorsDetails;
+

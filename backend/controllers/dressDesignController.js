@@ -48,7 +48,7 @@ const getAllDressDesigns = async (req, res) => {
 
 // Controller to get a specific dress design by ID
 const getDressDesignByCat = async (req, res) => {
-  const {category} = req.body;
+  const {category} = req.body;console.log(category);
 console.log(category);
   try {
     const dressDesign = await DressDesign.find({category:category});

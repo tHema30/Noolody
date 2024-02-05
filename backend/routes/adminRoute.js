@@ -20,9 +20,9 @@ import {
 
 
 //admin 
-router.get('/all-users' ,protect,getallUser);
+router.get('/all-users' ,getallUser);
 router.get('/all-users/:id' ,protect, getUserById);
-router.get("/tailorsProfile" ,protect,  getallTailors,isAdmin);
+router.get("/tailorsProfile" , getallTailors);
 router.get("/tailorsProfile/:id",protect,gettailorById);
 router.get('/all-orders' ,protect,getallOrders);
 router.get("all-orders/:id",protect,getallOrdersById);

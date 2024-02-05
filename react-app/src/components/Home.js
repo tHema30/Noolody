@@ -11,7 +11,7 @@ function Home() {
         <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img className="w-100" src={require("../assets/img/homebanner1.webp")} alt=""/>
+                    <img className="w-100" src={require("../assets/img/homenew01.jpg")} alt=""/>
                     <div className="carousel-caption">
                         <div className="container">
                             <div className="row justify-content-start">
@@ -24,7 +24,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img className="w-100" src={require("../assets/img/homebanner1.webp")} alt=""/>
+                    <img className="w-100" src={require("../assets/img/homenewhema02.png")} alt=""/>
                     <div className="carousel-caption">
                         <div className="container">
                             <div className="row justify-content-start">

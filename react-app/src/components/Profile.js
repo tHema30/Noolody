@@ -1,42 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+const Profile = ({ handleLogout, handleUpdateProfile, userName }) => {
+  const [fullName, setFullName] = useState("");
+  const [errors, setErrors] = useState({});
 
-
-
-const Profile = () => {
   const onSubmit = (event) => {
     event.preventDefault();
- // Your form submission logic goes
     console.log("Form submitted");
+    // Your form submission logic goes here
   };
 
   const validateFullName = (value) => {
     if (!value) {
-      return "Full Name is required";
+      return "Full Name is required.";
     }
-
-    // You can add more specific validation rules for the full name
-
+    // Add any additional validation logic here
     return true;
   };
-  const [errors, setErrors] = React.useState({});
 
-  const validateBio = (value) => {
-    if (!value) {
-      return "Bio is required";
+  const handleFullNameChange = (event) => {
+    setFullName(event.target.value);
+    const error = validateFullName(event.target.value);
+    if (error) {
+      setErrors({ fullName: error });
+    } else {
+      setErrors({});
     }
-
-    // You can add more specific validation rules for the bio
-
-    return true;
   };
 
   return (
     <div className="container bootstrap snippets bootdey">
-      <h1 className="text-primary">Edit Profile</h1>
+      <h1 className="text-primary">Welcome, {userName}</h1>
       <hr />
       <div className="row">
-        {/* left column */}
         <div className="col-md-3">
           <div className="text-center">
             <img
@@ -48,19 +44,7 @@ const Profile = () => {
             <input type="file" className="form-control" />
           </div>
         </div>
-
-        {/* edit form column */}
         <div className="col-md-9 personal-info">
-          <div className="alert alert-info alert-dismissable">
-            <a
-              className="panel-close close"
-              data-dismiss="alert"
-            >
-              ×
-            </a>{" "}
-            <i className="fa fa-coffee" /> This is an <strong>.alert</strong>. Use
-            this to show important messages to the user.
-          </div>
           <h3>Personal info</h3>
           <form className="form-horizontal" role="form" onSubmit={onSubmit}>
             <div className="form-group">
@@ -69,8 +53,10 @@ const Profile = () => {
                 <input
                   className="form-control"
                   type="text"
-                  defaultValue="Name"
+                  value={fullName}
+                  onChange={handleFullNameChange}
                 />
+                {errors.fullName && <span>{errors.fullName}</span>}
               </div>
             </div>
             <div className="form-group">
@@ -81,19 +67,8 @@ const Profile = () => {
                   className="form-control"
                   placeholder="Enter your full name"
                   name="user name"
-                  ref={(input) =>
-                    input &&
-                    !input.validity.valid &&
-                    errors.fullName &&
-                    input.focus()
-                  }
                   defaultValue=""
-                  onBlur={(e) =>
-                    validateFullName(e.target.value) !== true &&
-                    (errors.fullName = { message: validateFullName(e.target.value) })
-                  }
                 />
-                {errors.fullName && <span>{errors.fullName.message}</span>}
               </div>
             </div>
             <div className="panel panel-default">
@@ -122,11 +97,11 @@ const Profile = () => {
                   </div>
                 </div>
                 <div className="form-group">
-                  <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="btn btn-default">
+                  <div className="col-sm-10 col-sm-offset-2">
+                    <button type="submit" className="btn btn-default">
                       Submit
                     </button>
-                   
+      
                   </div>
                 </div>
               </div>

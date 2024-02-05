@@ -115,6 +115,8 @@ const Login = () => {
 
 
   return (
+    <>
+    <Header/>
     <div className="form_container">
 
       {isLoggedIn ? <Profile handleLogout={handleLogout} /> : (
@@ -155,6 +157,8 @@ const Login = () => {
         </>
       )}
     </div>
+    <Footer/>
+    </>
   );
       };
 

@@ -146,12 +146,12 @@ return (
     </div>
   </form>
   <ToastContainer />
-  {/* </Footer> */}
 
-</div>
-</div>
-</div>
-</div>
+
+    </div>
+   </div>
+   </div>
+  </div>
 </div>
 
 

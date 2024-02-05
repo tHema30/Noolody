@@ -2,8 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import  '../Admin/admin.css'
-import '../Admin/User'
-import '../Admin/TailorDetails'
+import '../Admin/User.js'
+import '../Admin/TailorDetails.js'
+import '../Admin/DressDesignDetails.js'
 
 
 const AdminNavbar = () => {

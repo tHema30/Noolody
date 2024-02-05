@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row } from 'react-bootstrap';
 import DressDesignCard from './DressDesignCard'; // Create a DressDesignCard component for rendering individual cards
+import Header from "./Header";
+import Footer from "./Footer";
 
 const DressDesignList = () => {
   const [dressDesigns, setDressDesigns] = useState([]);
@@ -19,6 +21,8 @@ const DressDesignList = () => {
   }, []);
 
   return (
+    <>
+    <Header/>
     <Container className='my-5'>
       <Row xs={1} md={2} lg={3} className='g-4'>
         {dressDesigns.map(dressDesign => (
@@ -26,6 +30,8 @@ const DressDesignList = () => {
         ))}
       </Row>
     </Container>
+    <Footer/>
+    </>
   );
 };
 

@@ -5,10 +5,10 @@ import Login from "./components/Login";
 import Signup from "./components/SignUp";
 
 
-import Header from "./components/Header";
-import Footer from "./components/Footer" 
+// import Header from "./components/Header";
+// import Footer from "./components/Footer" 
 
-import Text from './components/Text';
+// import Text from './components/Text';
 import Contact from './components/Contact';
 import About from "./components/About";
 import Features from "./components/Features";
@@ -33,7 +33,7 @@ function App() {
      <div>
       {/* <Header/> */}
     <Routes>
-    <Route path="/" element={<Text/>} />
+    <Route path="/" element={<Home/>} />
     <Route path="/login" element={<Login />} />
     <Route path="/profile" element={<Profile />} />
     <Route path="/signup" element={<Signup />} />

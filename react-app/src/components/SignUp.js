@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -109,6 +111,8 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="form_container">
       <h2>Signup Account</h2>
       <form onSubmit={handleSubmit}>
@@ -152,6 +156,8 @@ const Signup = () => {
       </form>
       <ToastContainer />
     </div>
+    <Footer/>
+    </>
   );
 };
 

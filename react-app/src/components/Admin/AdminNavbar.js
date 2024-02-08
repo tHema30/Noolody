@@ -9,7 +9,7 @@ import '../Admin/DressDesignDetails.js'
 
 const AdminNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg " >
+    <nav className="navbar navbar-expand-lg navadmin " >
       <Link className="navbar-brand" to="/admin">
         Admin Dashboard
       </Link>

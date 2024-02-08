@@ -53,7 +53,7 @@ const DressDesign = () => {
   
     <div className="design-form">
       {/* <h1>Dress Design Upload</h1> */}
-      <img src={require('../assets/img/Noolody2.png')} alt="logo" width="350"style={{marginbottom: '80px'}} />
+      <img src={require('../assets/img/Noolody2.png')} alt="logo" width="350" />
 
       <label htmlFor="category">Category:</label>
       <input type="text" id="category" value={category} onChange={handleCategoryChange} required />

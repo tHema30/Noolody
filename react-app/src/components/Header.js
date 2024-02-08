@@ -76,6 +76,9 @@ function Header() {
           <Link to="/features" className="nav-item nav-link">
             How It's work
           </Link>
+          <Link to="/services" className="nav-item nav-link">
+            Services
+          </Link>
           <DropdownMenu />
           <Link to="/contact" className="nav-item nav-link">
             Contact Us
@@ -88,7 +91,7 @@ function Header() {
                 <a className="-sm-square bg-white rounded- ms-3"></a>
               </Link>
             ) : (
-              <Link to="/login" className="btn ml-4" id="login_btn">
+              <Link to="/login" className="btn ml-4" id="login_btn" style={{"color":"#fff"}}>
                 Login
               </Link>
             )}

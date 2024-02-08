@@ -99,7 +99,7 @@ return (
             classNameName="form-control"
             id="name"
             placeholder="Your Name"
-            style={{ "width":"600px" }}
+            style={{ "width":"690px" }}
             value={name}
             onChange={handleOnChange}
             name="name"
@@ -113,7 +113,7 @@ return (
             type="email"
             classNameName="form-control"
             id="email"
-            style={{ "width":"600px" }}
+            style={{ "width":"690px" }}
             placeholder="Your Email"
             value={email}
             onChange={handleOnChange}
@@ -128,7 +128,7 @@ return (
             classNameName="form-control"
             placeholder="Leave a message here"
             id="message"
-            style={{ "height": "200px", "width":"600px" }}
+            style={{ "height": "200px", "width":"690px" }}
             value={message}
             onChange={handleOnChange}
             name="message"

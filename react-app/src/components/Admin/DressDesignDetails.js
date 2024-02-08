@@ -32,7 +32,8 @@ const DressDesignDetails = ({ onEdit, onDelete }) => {
           </tr>
         </thead>
         <tbody>
-          {dressDesigns.map(dressDesign => (
+        {Array.isArray(dressDesigns) && dressDesigns.map(dressDesign => (
+          // {dressDesigns.map(dressDesign => (
             <tr key={dressDesign._id}>
               <td>{dressDesign._id}</td>
               <td>{dressDesign.category}</td>

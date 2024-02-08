@@ -80,25 +80,33 @@ const Login = () => {
       );
 
       console.log(data);
-      const { success, message } = data;
+   const { success, message, role } = data;
 
-      if (success) {
-        handleSuccess(message);
-        setTimeout(() => {
-          navigate("/home"); //profile code
-        }, 1000);
+  if (success) {
+    handleSuccess(message);
+    setTimeout(() => {
+      if (role === "admin") {
+        // Redirect to the admin panel
+        navigate("/admin");
       } else {
-        handleError(message);
+        // Redirect to the normal user landing page
+        navigate("/home");
       }
-    } catch (error) {
-      
-    }
-    setInputValue({
-      ...inputValue,
-      email: "",
-      password: "",
-    });
-  };
+    }, 1000);
+  } else {
+    handleError(message);
+  }
+} catch (error) {
+  // Handle error
+}
+
+setInputValue({
+  ...inputValue,
+  email: "",
+  password: "",
+});
+};
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogout = () => {

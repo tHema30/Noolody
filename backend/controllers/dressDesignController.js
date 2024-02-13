@@ -65,9 +65,48 @@ const getDressDesignByCat = async (req, res) => {
 
 
 
+  // Edit a dress design by ID
+ const editDesign = async (req, res) => {
+    try {
+      const { category } = req.params;
+      const updatedDesign = await DressDesign.find(category, req.body, { new: true });
+
+      if (!updatedDesign) {
+        return res.status(404).json({ error: 'Design not found' });
+      }
+
+      res.json(updatedDesign);
+    } catch (error) {
+      console.error('Error editing dress design:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
+
+ const  deleteDesign = async (req, res) => {
+    try {
+      const { category } = req.params;
+      const deletedDesign = await DressDesign.find(category);
+
+      if (!deletedDesign) {
+        return res.status(404).json({ error: 'Design not found' });
+      }
+
+      res.json({ message: 'Design deleted successfully' });
+    } catch (error) {
+      console.error('Error deleting dress design:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
+
+
+
+
 
 export {
-                uploadDressDesign,
-                getAllDressDesigns,
-                getDressDesignByCat
+
+       uploadDressDesign,
+       getAllDressDesigns,
+      getDressDesignByCat,
+      editDesign,
+      deleteDesign
               };

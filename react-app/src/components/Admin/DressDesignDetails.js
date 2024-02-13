@@ -1,5 +1,3 @@
-// AdminDressDesignList.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Table, Button } from 'react-bootstrap';
@@ -7,9 +5,31 @@ import { Table, Button } from 'react-bootstrap';
 const DressDesignDetails = ({ onEdit, onDelete }) => {
   const [dressDesigns, setDressDesigns] = useState([]);
 
+  const handleEdit = (id) => {
+    // Define the logic for handling edit
+    // For example, you can call the onEdit function with the dress design ID
+    
+    onEdit(id);
+  };
+
+  const handleDelete = (id) => {
+    // Define the logic for handling delete
+    // For example, you can call the onDelete function with the dress design ID
+    onDelete(id);
+  };
+
+  const buttonStyle = {
+    // Define the button style as needed
+    // For example, you can set backgroundColor, color, padding, etc.
+    backgroundColor: '#492E87',
+    color: 'white',
+    padding: '5px 10px',
+    cursor: 'pointer',
+  };
+
   useEffect(() => {
     // Fetch dress designs from the server
-    axios.get('http://localhost:7300/api/designs/dress-designs/cat',{category:"ladies"}) // Update the URL with your actual API endpoint
+    axios.get('http://localhost:7300/api/designs/dress-designs/cat', { category: 'ladies' }) // Update the URL with your actual API endpoint
       .then(response => {
         setDressDesigns(response.data);
       })
@@ -32,8 +52,7 @@ const DressDesignDetails = ({ onEdit, onDelete }) => {
           </tr>
         </thead>
         <tbody>
-        {Array.isArray(dressDesigns) && dressDesigns.map(dressDesign => (
-          // {dressDesigns.map(dressDesign => (
+          {Array.isArray(dressDesigns) && dressDesigns.map(dressDesign => (
             <tr key={dressDesign._id}>
               <td>{dressDesign._id}</td>
               <td>{dressDesign.category}</td>
@@ -46,8 +65,8 @@ const DressDesignDetails = ({ onEdit, onDelete }) => {
                 />
               </td>
               <td>
-                <Button onClick={() => onEdit(dressDesign)} variant="primary">Edit</Button>{' '}
-                <Button onClick={() => onDelete(dressDesign._id)} variant="danger">Delete</Button>
+                <button style={buttonStyle} onClick={() => handleEdit(dressDesign._id)}>Edit</button>
+                <button style={buttonStyle} onClick={() => handleDelete(dressDesign._id)}>Delete</button>
               </td>
             </tr>
           ))}

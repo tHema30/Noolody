@@ -25,7 +25,7 @@ import FormBook from "./components/FormBook";
 import TailorRegister from "./components/TailorRegister";
 import DressDesign from "./components/DressDesign";
 import DressDesignList from "./components/DressDesignList";
-// import BookForm from "./components/Booking/BookForm";
+import BookForm from "./components/Booking/BookForm";
 
 
 
@@ -49,7 +49,7 @@ function App() {
     <Route path="/admin/*" element={<AdminHome />} />
     <Route path="/dresscard" element={<DressDesignList />} />
 
-    {/* <Route path="/booking" element={<BookForm />} /> */}
+    <Route path="/booking" element={<BookForm />} />
 
 
 

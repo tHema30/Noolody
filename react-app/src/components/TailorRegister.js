@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Footer";
 
 
 
@@ -138,7 +139,7 @@ const TailorRegister = () => {
       <Header />
       <div className="App">
         <div class="container">
-          <header>Registration</header>
+          <header>Tailor Registration</header>
           <form onSubmit={handleSubmit}>
             <div class="form first">
               <div class="details personal">
@@ -285,6 +286,7 @@ const TailorRegister = () => {
         </div>
       </div>
       <ToastContainer />
+      <Footer/>
     </>
   );
 };

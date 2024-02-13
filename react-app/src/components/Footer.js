@@ -1,11 +1,11 @@
 function Footer() {
     return (
       <div>
-       <div className="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div className="container py-5">
+       <div className="container-fluid bg-dark footer mt-3 pt-3 wow fadeIn" data-wow-delay="0.1s">
+        <div className="container">
             <div className="row g-5">
                 <div className="col-lg-3 col-md-6">
-                    <h1 className="fw-bold text-primary mb-4"><span className="text-secondary">FineFit</span></h1>
+                    <h1 className="fw-bold text-primary mb-4"><span className="text-secondary">NOOLODY</span></h1>
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
                     <div className="d-flex pt-2">
                         <a className="btn btn-square btn-outline-light rounded-circle me-1" href="1"><i className="fab fa-twitter"></i></a>
@@ -22,8 +22,8 @@ function Footer() {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h4 className="text-light mb-4">Quick Links</h4>
-                    <a className="btn btn-link" href="1">About Us</a>
-                    <a className="btn btn-link" href="1">Contact Us</a>
+                    <a className="btn btn-link" href="/about">About Us</a>
+                    <a className="btn btn-link" href="/contact">Contact Us</a>
                     <a className="btn btn-link" href="1">Our Services</a>
                     <a className="btn btn-link" href="1">Terms & Condition</a>
                     <a className="btn btn-link" href="1">Support</a>
@@ -38,14 +38,14 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div className="container-fluid copyright">
+        <div className="container-fluid ">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="/home">FineFit</a>, All Right Reserved.
+                        &copy; <a href="/home">NOOLODY</a>, All Right Reserved.
                     </div>
                     <div className="col-md-6 text-center text-md-end">
-                        Designed By <a href="./home">FineFit</a>
+                        Designed By <a href="./home">Hema</a>
                     </div>
                 </div>
             </div>

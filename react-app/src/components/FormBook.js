@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'; 
+import Header from "./Header";
+import Footer from "./Footer";
 
 // import '../components/order.css';
 
@@ -61,6 +63,7 @@ function FormBook() {
 
   return (
     <>
+    <Header/>
       <div className="App">
         <div className="container">
           <div className="title">
@@ -197,7 +200,7 @@ function FormBook() {
         </div>
       </div>
     </div>
-    {/* <AboutFooter/> */}
+    <Footer/>
     </>
   );
 }

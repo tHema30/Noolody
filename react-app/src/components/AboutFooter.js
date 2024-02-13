@@ -5,7 +5,7 @@ function AboutFooter() {
         <div className="container py-5">
             <div className="row g-5">
                 <div className="col-lg-3 col-md-6">
-                    <h1 className="fw-bold text-primary mb-4"><span className="text-secondary">FineFit</span></h1>
+                    <h1 className="fw-bold text-primary mb-4"><span className="text-secondary">NOOLODY</span></h1>
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
                     <div className="d-flex pt-2">
                         <a className="btn btn-square btn-outline-light rounded-circle me-1" href="1"><i className="fab fa-twitter"></i></a>
@@ -42,10 +42,10 @@ function AboutFooter() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="/home">FineFit</a>, All Right Reserved.
+                        &copy; <a href="/home">NOOLODY</a>, All Right Reserved.
                     </div>
                     <div className="col-md-6 text-center text-md-end">
-                        Designed By <a href="./home">FineFit</a>
+                        Designed By <a href="./home">NOOLODY</a>
                     </div>
                 </div>
             </div>

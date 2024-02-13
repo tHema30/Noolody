@@ -8,6 +8,7 @@ function Home() {
       <Header></Header>
       <div>
         <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+            {/* Section 1 start */}
         <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
@@ -15,7 +16,7 @@ function Home() {
                     <div className="carousel-caption">
                         <div className="container">
                             <div className="row justify-content-start">
-                                <div className="col-lg-7">
+                                <div className="col-lg-7 home-content">
                                     <h1 className="display-2 mb-5 animated slideInDown">We Stitch Design <br/>FIT YOU PERFECTLY</h1>
                                     <a href="./formbook" onClick={myFunction} className="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Book Now</a>
                                 </div>
@@ -28,7 +29,7 @@ function Home() {
                     <div className="carousel-caption">
                         <div className="container">
                             <div className="row justify-content-start">
-                                <div className="col-lg-7">
+                                <div className="col-lg-7 home-content">
                                     <h1 className="display-2 mb-5 animated slideInDown">Best and Realiable Tailoring service</h1>
                                     <a href="./tailorregister"  onClick={myFunction}  className="btn btn-primary rounded-pill py-sm-3 px-sm-5">Register Now</a>
                                 </div>
@@ -37,8 +38,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
             </button>
@@ -48,6 +48,7 @@ function Home() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
+        {/* section 2 start  */}
     <div className="container-xxl py-5">
         <div className="container">
             <div className="row g-5 align-items-center">

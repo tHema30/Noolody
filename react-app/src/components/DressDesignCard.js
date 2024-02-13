@@ -3,8 +3,14 @@ import { Card, Button } from 'react-bootstrap';
 
 const DressDesignCard = ({ dressDesign }) => {
   return (
-    <Card>
-      <Card.Img variant="top" src={dressDesign.designImage.url} alt={dressDesign.category} />
+    
+    <Card className="card custom-rounded-" style={{ width: '18rem' }} >
+      <Card.Img
+        variant="top"
+        src={dressDesign.designImage.url}
+        alt={dressDesign.category}
+        className="custom-rounded-image" // Apply the custom CSS class
+      />
       <Card.Body>
         {/* <Card.Title>{dressDesign.category}</Card.Title> */}
         {/* <Card.Text>{dressDesign.description}</Card.Text> */}

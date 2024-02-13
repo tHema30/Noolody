@@ -266,45 +266,9 @@ button:hover{
 
 
 /*** Header ***/
-.carousel-caption {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-  z-index: 1;
-}
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 15%;
-}
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 3rem;
-  height: 3rem;
-  background-color: var(--primary);
-  border: 10px solid var(--primary);
-  border-radius: 3rem;
-}
 
-@media (max-width: 768px) {
-  #header-carousel .carousel-item {
-      position: relative;
-      min-height: 450px;
-  }
-  
-  #header-carousel .carousel-item img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-}
 
 .page-header {
   padding-top: 12rem;
@@ -395,7 +359,7 @@ border-color:#492E87  !important;
 
 
 /*** Testimonial ***/
-.testimonial-carousel .owl-item .testimonial-item img {
+/* .testimonial-carousel .owl-item .testimonial-item img {
   width: 60px;
   height: 60px;
 }
@@ -405,28 +369,28 @@ border-color:#492E87  !important;
   transition: .5s;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-item {
+/* .testimonial-carousel .owl-item.center .testimonial-item {
   background: var(--primary) !important;
-}
+} */
 
-.testimonial-carousel .owl-item.center .testimonial-item * {
+/* .testimonial-carousel .owl-item.center .testimonial-item * {
   color: #FFFFFF !important;
-}
-
+} */
+/* 
 .testimonial-item .text-primary {
   color: #492E87  !important;
-}
+} */
 
-.testimonial-carousel .owl-item.center .testimonial-item i {
+/* .testimonial-carousel .owl-item.center .testimonial-item i {
   color: var(--secondary) !important;
-}
+} */
 
-.testimonial-carousel .owl-nav {
+/* .testimonial-carousel .owl-nav {
   margin-top: 30px;
   display: flex;
   justify-content: center;
-}
-
+} */
+/* 
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
   margin: 0 12px;
@@ -446,7 +410,7 @@ border-color:#492E87  !important;
 .testimonial-carousel .owl-nav .owl-next:hover {
   color: #FFFFFF;
   background: var(--primary);
-}
+} */ */
 
 
 /*** Footer ***/

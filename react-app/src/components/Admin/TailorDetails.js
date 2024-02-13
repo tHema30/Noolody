@@ -13,20 +13,39 @@ const thTdStyle = {
   padding: '8px',
 };
 
+const buttonStyle = {
+  marginRight: '5px',
+};
+
 const TailorsDetails = () => {
-  const [tailors, setTailors] = useState(null); // Use null instead of an empty array
+  const [tailors, setTailors] = useState(null);
 
   useEffect(() => {
-    // Fetch tailors data from the server
     axios.get('http://localhost:7300/api/admin/tailorsProfile')
       .then(response => {
         console.log('Response data:', response.data);
-        setTailors(response.data.data); // Adjust this line based on the actual structure of the API response
+        setTailors(response.data.data);
       })
       .catch(error => {
         console.error('Error fetching tailor details:', error);
       });
   }, []);
+
+  const handleEdit = (tailorId) => {
+    // Add logic to navigate to the edit page or show a modal for editing
+    console.log(`Edit tailor with ID: ${tailorId}`);
+  };
+
+  const handleDelete = (tailorId) => {
+    axios.delete(`http://localhost:7300/api/admin/tailorsProfile/${tailorId}`)
+      .then(response => {
+        console.log('Tailor deleted successfully:', response.data);
+        // Update the state or fetch data again to reflect the changes
+      })
+      .catch(error => {
+        console.error('Error deleting tailor:', error);
+      });
+  };
 
   return (
     <div>
@@ -42,6 +61,7 @@ const TailorsDetails = () => {
             <th style={thTdStyle}>ID Number</th>
             <th style={thTdStyle}>DOB</th>
             <th style={thTdStyle}>Gender</th>
+            <th style={thTdStyle}>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -55,6 +75,10 @@ const TailorsDetails = () => {
               <td style={thTdStyle}>{tailor.idnumber}</td>
               <td style={thTdStyle}>{new Date(tailor.dob).toLocaleDateString()}</td>
               <td style={thTdStyle}>{tailor.gender}</td>
+              <td style={thTdStyle}>
+                <button style={buttonStyle} onClick={() => handleEdit(tailor._id)}>Edit</button>
+                <button style={buttonStyle} onClick={() => handleDelete(tailor._id)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -64,4 +88,3 @@ const TailorsDetails = () => {
 };
 
 export default TailorsDetails;
-

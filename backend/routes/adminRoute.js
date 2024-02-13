@@ -20,10 +20,12 @@ import {
 
 
 //admin 
-router.get('/all-users' ,getallUser);
-router.get('/all-users/:id' ,protect, getUserById);
-router.get("/tailorsProfile" , getallTailors);
-router.get("/tailorsProfile/:id",protect,gettailorById);
+router.get('/all-users' ,getallUser ,isAdmin,protect);
+router.get('/all-users/:id' ,protect, isAdmin, getUserById);
+
+router.get("/tailorsProfile" ,getallTailors);
+router.get("/tailorsProfile/:id" ,gettailorById);
+
 router.get('/all-orders' ,protect,getallOrders);
 router.get("all-orders/:id",protect,getallOrdersById);
 
